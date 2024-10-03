@@ -11,9 +11,9 @@
             TenDoubles();
             MenuSystem mainmenu = new MenuSystem("Program");
 
-            mainmenu.AddMenuItem("Randomise List of Doubles (10 Values)", "TenDoubles", typeof(Program));
-            mainmenu.AddMenuItem("Print List of Doubles", "PrintListOfDoubles", typeof(Program));
-            mainmenu.AddMenuItem("Perform a Bubble Sort", "PerformBubble", typeof(Program));
+            mainmenu.AddMenuItem("RANDOMISE LIST OF DOUBLES (10 VALUES)", "TenDoubles", typeof(Program));
+            mainmenu.AddMenuItem("PRINT LIST OF DOUBLES", "PrintListOfDoubles", typeof(Program));
+            mainmenu.AddMenuItem("PERFORM BUBBLE SORT ALGORITHM", "PerformBubble", typeof(Program));
 
             mainmenu.RunForever();
             Console.ReadKey();
@@ -23,16 +23,16 @@
 
         public static void PerformBubble()
         {
-            Console.WriteLine("Performing Bubble Sort...");
+            Console.WriteLine("\nPERFORMING BUBBLE SORT...");
             BubbleSort.Perform(listOfDoubles);
-            Console.WriteLine("Sort Completed");
+            Console.WriteLine("SORT COMPLETED");
         }
 
         public static void TenDoubles()
         {
-            Console.WriteLine("Populating list with random numbers...");
+            Console.WriteLine("\nPOPULATING LIST WITH RANDOM NUMBERS...");
             PopulateListWithRandomDoubles(10);
-            Console.WriteLine("List Populated");
+            Console.WriteLine("LIST POPULATED");
         }
 
         static void PopulateListWithRandomDoubles(int size)

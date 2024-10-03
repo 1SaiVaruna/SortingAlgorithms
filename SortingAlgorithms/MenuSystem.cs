@@ -19,7 +19,7 @@ namespace SortingAlgorithms
             menuOptions = new Dictionary<string, MethodInfo>();
 
             Type thisType = typeof(Environment);
-            AddMenuItem("Exit Application", thisType.GetMethod("Exit"));
+            AddMenuItem("EXIT APPLICATION", thisType.GetMethod("Exit"));
         }
 
         public void RunForever()
@@ -39,7 +39,7 @@ namespace SortingAlgorithms
         void DisplayOptions()
         {
             Console.Clear();
-            Console.WriteLine("Please choose from the following options: \n");
+            Console.WriteLine("PLEASE CHOOSE ONE OF THE FOLLOWING OPTIONS: \n");
             int i = 0;
 
             foreach (string menuItem in menuOptions.Keys)
@@ -48,7 +48,7 @@ namespace SortingAlgorithms
                 i++;
             }
 
-            Console.WriteLine("\n\n");
+            Console.WriteLine("\n");
         }
 
         void GetMenuSelection()
