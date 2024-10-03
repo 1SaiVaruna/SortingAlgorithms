@@ -74,5 +74,16 @@ namespace SortingAlgorithms
                 }
             }
         }
+
+        public void AddMenuItem(string menuMessage, MethodInfo methodInfo)
+        {
+            menuOptions.Add(menuMessage, methodInfo);
+        }
+
+        public void AddMenuItem(string menuMessage, string methodName, Type callingType)
+        {
+            MethodInfo methodInfo = callingType.GetMethod(methodName);
+            menuOptions.Add(menuMessage, methodInfo);
+        }
     }
 }
