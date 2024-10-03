@@ -50,5 +50,29 @@ namespace SortingAlgorithms
 
             Console.WriteLine("\n\n");
         }
+
+        void GetMenuSelection()
+        {
+            string userInput = Console.ReadLine();
+
+            MethodInfo mi;
+
+            if (int.TryParse(userInput, out int integerInput))
+            {
+                if (integerInput == 0)
+                {
+                    mi = menuOptions.ElementAt(integerInput).Value;
+                    mi.Invoke(this, new object[] { 0 });
+                    Console.ReadKey();
+                }
+
+                else if (integerInput > 0 && integerInput < menuOptions.Count)
+                {
+                    mi = menuOptions.ElementAt(integerInput).Value;
+                    mi.Invoke(this, null);
+                    Console.ReadKey();
+                }
+            }
+        }
     }
 }
