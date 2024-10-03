@@ -21,5 +21,34 @@ namespace SortingAlgorithms
             Type thisType = typeof(Environment);
             AddMenuItem("Exit Application", thisType.GetMethod("Exit"));
         }
+
+        public void RunForever()
+        {
+            while (true)
+            {
+                Run();
+            }
+        }
+
+        public void Run()
+        {
+            DisplayOptions();
+            GetMenuSelection();
+        }
+
+        void DisplayOptions()
+        {
+            Console.Clear();
+            Console.WriteLine("Please choose from the following options: \n");
+            int i = 0;
+
+            foreach (string menuItem in menuOptions.Keys)
+            {
+                Console.WriteLine("(" + i + ") " + menuItem);
+                i++;
+            }
+
+            Console.WriteLine("\n\n");
+        }
     }
 }
